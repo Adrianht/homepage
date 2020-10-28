@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Myself from './myself.png'
 
 const Me = () => {
   return (
     <div className="me">
-      <p>Me</p>
+      <img src={Myself} alt="Me"/>
     </div>
   )
 }
