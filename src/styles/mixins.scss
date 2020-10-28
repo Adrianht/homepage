@@ -1,0 +1,56 @@
+@import "./keyframes.scss";
+
+@mixin animate($height, $animation, $time, $timing-function){
+  transform: translateY($height);
+  animation: $animation $time $timing-function forwards;
+}
+
+@mixin card($height, $width, $bg-color1, $bg-color2){
+  height: $height;
+  width: $width;
+  @include animate(50vh, fade-in, 2s, cubic-bezier(0.500, 0.250, 0.480, 1.260));
+
+  &.shade-1, &.shade-2{
+    height: $height;
+    width: $width;
+  }
+
+  .shade-1{
+    top: 1em;
+    right: .5em;
+    z-index: -1;
+    background: $bg-color1;
+  }
+
+  .shade-2{
+    top: 2em;
+    right: 1em;
+    z-index: -2;
+    background: $bg-color2;
+  }
+
+  &.down{
+    
+    @include animate(-50vh, fade-in, 2s, cubic-bezier(0.500, 0.250, 0.480, 1.260));
+
+    .shade-1{
+      @include animate(-50vh, fade-in, 2s, cubic-bezier(0.110, 0.360, 0.830, 1.550));
+    }
+
+    .shade-2{
+      @include animate(-50vh, fade-in, 2s, cubic-bezier(0.110, 0.360, 0.660, 1.650));
+    }
+  }
+
+  &.up{
+    @include animate(50vh, fade-in, 2s, cubic-bezier(0.500, 0.250, 0.480, 1.260));
+
+    .shade-1{
+      @include animate(50vh, fade-in, 2s, cubic-bezier(0.110, 0.360, 0.830, 1.550));
+    }
+
+    .shade-2{
+      @include animate(50vh, fade-in, 2s, cubic-bezier(0.110, 0.360, 0.660, 1.650));
+    }
+  }
+}

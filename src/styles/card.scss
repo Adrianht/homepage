@@ -1,0 +1,86 @@
+@import "./mixins.scss";
+
+$card-1-height: 200px;
+$card-2-height: 300px;
+$card-3-height: 150px;
+
+$card-1-width: 250px;
+$card-2-width: 300px;
+$card-3-width: 250px;
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  height: 600px;
+
+  .link-to-site{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .check-out{
+    margin-bottom: .5em;
+    font-size: 20px;
+  }
+  
+  .single-card {
+    opacity: 1;
+    width: 100%;
+    position: relative;
+    
+    .tech{
+      font-size: 14px;
+    }
+
+    .content{
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: #343434;
+      padding: 3rem 2rem;
+    }
+
+    .content, .shade-1, .shade-2{
+      // border: 2px solid rgba(255, 255, 255, 0.4)
+    }
+
+    .shade-1, .shade-2{
+      position: absolute;
+      width: 100%;
+      height: 100%; 
+    }
+
+    &.one{
+      @include card($card-1-height, $card-1-width, #232323, #111111);
+    }
+    &.two{
+      @include card($card-2-height, $card-2-width, #232323, #111111);
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem 2rem;
+
+        a {
+          width: max-content;
+          justify-self: center;
+          align-self: center;
+          svg{
+            fill: #fff;
+          }
+        }
+      }
+    }
+    &.three{
+      @include card($card-3-height, $card-3-width, #232323, #111111);
+      
+      .content{
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+}
+
