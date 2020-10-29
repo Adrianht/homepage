@@ -31,7 +31,7 @@ const Main = () => {
 
   return (
     <main>
-      <ChevronButton class={checkDisabled(1, 'previous') ? 'previous-button disabled' : 'previous-button'} onChildClick={lessenIndex} disable={checkDisabled(1, 'previous')} />
+      <ChevronButton style={{transform: "rotate(176deg)"}} class={checkDisabled(1, 'previous') ? 'previous-button disabled' : 'previous-button'} onChildClick={lessenIndex} disable={checkDisabled(1, 'previous')} />
       <Me />
       <div className="step-container" key={currentStepIndex}>
         <Card currentStepIndex={currentStepIndex} panel={panels[currentStepIndex]} dir={direction}/>
