@@ -3,9 +3,9 @@ import Myself from './myself.png'
 
 const Me = () => {
   return (
-    <div className="me">
+    <section className="me">
       <img src={Myself} alt="Me"/>
-    </div>
+    </section>
   )
 }
 

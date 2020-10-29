@@ -4,7 +4,7 @@ import Me from './Me';
 import Info from './Info';
 import Card from './Card';
 
-import "./styles/scroll.scss";
+import "./styles/main.scss";
 import ChevronButton from './ChevronButton';
 
 const Main = () => {
