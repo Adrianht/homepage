@@ -4,7 +4,7 @@
 $card-1-height: 200px;
 $card-2-height: 300px;
 $card-3-height: 150px;
-$card-3-height-mobile: 200px;
+$card-3-height-mobile: 220px;
 
 $card-1-width: 250px;
 $card-2-width: 300px;
@@ -20,6 +20,10 @@ $card-3-width: 250px;
   @include maxDown{
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
+  }
+
+  @include mobile{
+    height: 500px;
   }
 
   
@@ -71,6 +75,7 @@ $card-3-width: 250px;
       @include mobile{
         grid-column: 1 / -1;
         grid-row: 1 / 3;
+        align-self: baseline;
       }
 
     }
@@ -84,6 +89,7 @@ $card-3-width: 250px;
 
       @include mobile{
         grid-column: 1 / -1;
+        grid-row: 2 / 6;
       }
 
       .content{
