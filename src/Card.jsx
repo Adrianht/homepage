@@ -7,10 +7,10 @@ const Card = (props) => {
     <div className={"card-container " + props.dir}>
       <div className={'single-card one ' + props.dir }>
         <div className="content">
-          <h2 className="check-out">
-            Check it out live
-          </h2>
           <a href={props.panel.site} className="link-to-site">
+            <h2 className="check-out">
+              Check it out live
+            </h2>
             {props.panel.niceSite}
           </a>
         </div>

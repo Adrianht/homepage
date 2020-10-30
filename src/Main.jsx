@@ -45,18 +45,18 @@ const Main = () => {
 let panels = [
   {
     index: 0,
-    title: "Rover Safari",
-    info: "Concept site for Erikson Rover Safari",
-    tech: "Made with Vue, Vuetify, GraphQL and GraphCMS",
-    site: "https://www.safari.adrianht.no",
-    niceSite: "safari.adrianht.no",
-    github: "https://github.com/Adrianht/vue-safari",
+    title: "Dynamic header",
+    info: "A navigation menu that scales nicely",
+    tech: "Made with Vue and SCSS",
+    site: "https://header.adrianht.no/",
+    niceSite: "header.adrianht.no",
+    github: "https://github.com/Adrianht/dynamic-header",
   },
   {
     index: 1,
     title: "Cleansounds",
     info: "Cleansoundsmovement is an artist movement honoring true everyday heroes in the fight against plastic pollution",
-    tech: "Vue, Mapbox, Scrollama",
+    tech: "Vue, Mapbox, Scrollama, SCSS",
     site: "https://www.cleansounds.com",
     niceSite: "cleansounds.com",
   },
@@ -64,7 +64,7 @@ let panels = [
     index: 2,
     title: "Bade ",
     info: "Want to go for a swim, but you wonder what the ocean temperature is like? Use this site to find out!",
-    tech: "Vue, Mapbox",
+    tech: "Vue, Mapbox, SCSS",
     site: "https://bade.adrianht.no/",
     niceSite: "bade.adrianht.no",
     github: "https://github.com/Adrianht/bade",
@@ -73,11 +73,19 @@ let panels = [
     index: 3,
     title: "Homepage",
     info: "This page, serves as a hub for information about projects and myself",
-    tech: "React",
+    tech: "React, SCSS",
     site: "#",
     niceSite: "You're already here!",
     github: "https://github.com/Adrianht/homepage",
-  }
+  },
+  {
+    index: 4,
+    title: "Rover Safari",
+    info: "Concept site for Erikson Rover Safari",
+    tech: "Made with Vue, Vuetify, GraphQL and GraphCMS",
+    site: "https://www.safari.adrianht.no",
+    niceSite: "safari.adrianht.no",
+  },
 ]
 
 
